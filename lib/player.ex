@@ -5,8 +5,6 @@ defmodule Trocasoco.Player do
   @enforce_keys @required_keys
   defstruct @required_keys
 
-
-
   def build(nome, soco, chute, cura) do
     %Trocasoco.Player{
       chute: chute,
