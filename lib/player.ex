@@ -1,19 +1,19 @@
-defmodule Trocasoco.Player do
-  @required_keys [:moves, :nome, :vida]
+defmodule ExMon.Player do
+  @required_keys [:life, :moves, :name]
   @max_life 100
 
   @enforce_keys @required_keys
   defstruct @required_keys
 
-  def build(nome, soco, chute, cura) do
-    %Trocasoco.Player{
-      vida: @max_life,
+  def build(name, move_rnd, move_avg, move_heal) do
+    %ExMon.Player{
+      life: @max_life,
       moves: %{
-        chute: chute,
-        cura: cura,
-        soco: soco
+        move_avg: move_avg,
+        move_heal: move_heal,
+        move_rnd: move_rnd
       },
-      nome: nome
+      name: name
     }
   end
 end
