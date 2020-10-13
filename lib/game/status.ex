@@ -5,4 +5,8 @@ defmodule Trocasoco.Game.Status do
     IO.inspect(Game.info())
     IO.puts("=========================")
   end
+
+  def print_wrong_move_message(move) do
+    IO.puts("\n====Movimento Inválido: #{move}====\n")
+  end
 end
